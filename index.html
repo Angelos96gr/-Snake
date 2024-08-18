@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+
+<html>
+<title>🐍Snake</title>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        #game_area {
+            display: flex;
+            background-color: white;
+            justify-content: center;
+            gap: 50px;
+            flex-direction: row;
+
+        }
+
+
+        .snake_frame {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+
+
+
+        }
+
+        .titles {
+            background-color: white;
+            height: 40px;
+            text-align: center;
+            align-content: center;
+            font-weight: bold;
+            font-size: large;
+        }
+
+
+
+        #play_area {
+
+            background-color: beige;
+            background-image: url(grass.JPG);
+            border: solid black;
+            border-radius: 5px;
+        }
+
+
+
+        #game_info {
+            display: flex;
+            background-color: white;
+            flex-direction: column;
+            gap: 50px;
+        }
+
+        #table_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            gap: 30px;
+            background-color: white;
+        }
+
+
+        .box {
+            background-color: rgb(231, 187, 130);
+            border: 1px solid black;
+            border-radius: 5px;
+            height: 50px;
+            width: 100px;
+            text-align: center;
+            align-content: center;
+        }
+
+
+        .snake_body_parts {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(8, 47, 8);
+            border-radius: 30%;
+        }
+
+        #snake_head {
+            bottom: 200px;
+            left: 200px;
+            background-color: black;
+
+
+        }
+
+        .apples {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+
+        .bombs {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="game_area">
+
+        <div class="snake_frame">
+            <div id="title" class="titles">
+                🐍Snake
+            </div>
+            <div id="play_area">
+                <div id="snake">
+                    <div id="snake_head" class="snake_body_parts"></div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div id="game_info">
+            <div id="game_info_title" class="titles">Game Info</div>
+            <div id="table_info">
+                <div class="box">Score
+                    <t id="score">0</t>
+                </div>
+                <div class="box">Timer
+                    <t id="mins">00</t>
+                    <t>:</t>
+                    <t id="secs">00</t>
+                </div>
+                <button id="speed_up" class="box">Faster 🚀</button>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <audio id="apple_eaten" src="apple_eaten.mp3"></audio>
+    <audio id="bomb_fired" src="bomb_fired.mp3"></audio>
+    <audio id="game_lost" src="game_lost.mp3"></audio>
+
+
+
+</body>
+<script src="index.js"></script>
+
+
+</html>
